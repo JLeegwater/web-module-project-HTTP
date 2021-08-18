@@ -21,7 +21,7 @@ const EditMovieForm = (props) => {
       .get(`http://localhost:5000/api/movies/${id}`)
       .then((res) => setMovie(res.data))
       .catch((error) => console.error(error));
-  }, []);
+  }, [id]);
 
   const handleChange = (e) => {
     setMovie({

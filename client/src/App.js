@@ -14,7 +14,7 @@ import axios from "axios";
 
 const App = (props) => {
   const [movies, setMovies] = useState([]);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [favoriteMovies /* , setFavoriteMovies */] = useState([]);
 
   useEffect(() => {
     axios
@@ -28,10 +28,10 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id) => {
-    setMovies(movies.filter((movie) => movie.id != id));
+    setMovies(movies.filter((movie) => movie.id !== id));
   };
 
-  const addToFavorites = (movie) => {};
+  //const addToFavorites = (movie) => {};
 
   return (
     <div>
